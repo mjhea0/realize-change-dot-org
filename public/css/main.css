@@ -1,0 +1,41 @@
+#results {
+  background-color: #eee;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+
+#main-btn {
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 30px;
+  color:#fff;
+  background-color:#008cba;
+  border-color:#0079a1;
+  max-width: 400px;
+  text-align: center;
+}
+
+#main-btn:hover {
+  background-color:#006d91;
+  border-color:#004b63;
+  cursor:pointer;
+}
+
+#title {
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+#description {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 35px;
+}
