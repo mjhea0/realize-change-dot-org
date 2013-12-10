@@ -31,6 +31,8 @@ app.configure('production', function(){
 // routes
 app.get('/', routes.index);
 app.get('/ping', routes.ping);
+app.get('/about', routes.about);
+app.get('/login', routes.login);
 
 app.get('/searching', function(req, res){
   var url = 'https://github.com/mjhea0/realize-change-dot-org/blob/master/answers.md'

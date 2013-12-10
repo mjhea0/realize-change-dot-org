@@ -2,10 +2,18 @@ extends layout
 
 block content
   .container
-      .jumbotron
-        h1 What are your dreams for the future?
-        br
-        #main-btn.animated.tada Click for an answer
-        br
-        #main-div
-        #results
+    .header
+    ul.nav.nav-pills.pull-right
+        li
+          a(href='/login') Login
+        li
+          a(href='/about') About
+        li
+          a(href='/ping') Ping
+    .jumbotron
+      h1 What are your dreams for the future?
+      br
+      #main-btn.animated.tada Click for an answer
+      br
+      #main-div
+      #results

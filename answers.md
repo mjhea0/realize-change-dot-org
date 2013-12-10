@@ -6,8 +6,6 @@
 
 **Mike** - You are my center when I spin away, Out of control on videotape, On videotape, On videotape, On videotape, On videotape, On videotape, On videotape 
 
-**Mike** - I gave an old woman my hat on the bus on a day it was negative five degrees outside.
-
 **John** - This is my way of saying goodbye, Because I can't do it face to face, So I'm talking to you before it's too late
 
 **Joanne** - No matter what happens now, I shouldn't be afraid, Because I know today has been the most perfect day I've ever seen.
