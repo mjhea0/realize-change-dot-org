@@ -1,7 +1,7 @@
 var path = require("path");
 
 exports.index = function(req, res){
-  res.render('index', { title: "Realize Change"});
+  res.render('index', { title: "RealizeChangeDotOrg"});
 };
 
 exports.ping = function(req, res){
