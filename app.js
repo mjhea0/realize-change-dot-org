@@ -60,8 +60,7 @@ app.get('/searching', function(req, res){
   });
 });
 
-// mongo config
-// heroku config | grep MONGOLAB_URI
+// mongo config - $ heroku config | grep MONGOLAB_URI
 var MONGOLAB_URI = "mongodb://heroku_app20244101:29bthc7358ast2t12fen96cf0@ds061318.mongolab.com:61318/heroku_app20244101"
 var mongo = process.env.MONGOLAB_URI || 'mongodb://localhost/realize-change-dot-org'
 mongoose.connect(mongo)
