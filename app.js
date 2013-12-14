@@ -60,7 +60,6 @@ app.get('/searching', function(req, res){
 });
 
 // mongo config
-var MONGOLAB_URI= "add_your_mongolab_uri_here"
 var mongo = process.env.MONGOLAB_URI || 'mongodb://localhost/realize-change-dot-org'
 mongoose.connect(mongo);
 
