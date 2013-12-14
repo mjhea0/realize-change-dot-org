@@ -1,3 +1,7 @@
+li {
+  font-style: italic;
+}
+
 #results {
   background-color: #eee;
   padding: 20px;
@@ -10,6 +14,10 @@
 #main-div {
   padding-left: 5%;
   padding-top: 10px;
+}
+
+.row {
+  padding-top: 40px;
 }
 
 #main-btn {
