@@ -62,7 +62,13 @@ app.get('/searching', function(req, res){
 
 // mongo config
 var mongo = process.env.MONGOLAB_URI || 'mongodb://localhost/realize-change-dot-org'
-mongoose.connect(mongo);
+mongoose.connect(mongo, function (err, res) {
+  if (err) {
+  console.log ('ERROR connecting to: ' + uristring + '. ' + err);
+  } else {
+  console.log ('Succeeded connected to: ' + uristring);
+  }
+});
 
 // run server
 app.listen(app.get('port'), function(){
