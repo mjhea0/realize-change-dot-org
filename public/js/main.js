@@ -1,8 +1,8 @@
 $(function(){
   $(".btn-one").click(function() {
-    console.log("yes!")
+	$('#totalOne').text(parseInt($('#totalOne').text()) + 1);
   });
   $(".btn-two").click(function() {
-    console.log("no!")
+	$('#totalTwo').text(parseInt($('#totalTwo').text()) + 1);
   });
 });
