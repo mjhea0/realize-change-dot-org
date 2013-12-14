@@ -6,6 +6,8 @@ var routes = require('./routes');
 var path = require('path');
 var request = require('request');
 var cheerio = require('cheerio');
+var mongoose = require('mongoose');
+var Answers = require('./models/answers.js');
 
 // global config
 var app = express();
@@ -28,11 +30,21 @@ app.configure('production', function(){
 });
 
 
+
+
 // routes
-app.get('/', routes.index);
+app.get('/', function(req, res){
+  Answers.find(function(error, emps){
+      console.log(emps)
+      res.render('index', {
+            title: 'Employees',
+            employees:emps
+        });
+  });
+});
 app.get('/ping', routes.ping);
 app.get('/about', routes.about);
-app.get('/login', routes.login);
+app.get('/answers', routes.answers);
 
 app.get('/searching', function(req, res){
   var url = 'https://github.com/mjhea0/realize-change-dot-org/blob/master/answers.md'
@@ -50,7 +62,19 @@ app.get('/searching', function(req, res){
   });
 });
 
+// mongo config
+var MONGOLAB_URI= "add_your_mongolab_uri_here"
+var mongo = process.env.MONGOLAB_URI || 'mongodb://localhost/realize-change-dot-org'
+mongoose.connect(mongo);
+
+// mongo model
+
+
 // run server
 app.listen(app.get('port'), function(){
   console.log('\nExpress server listening on port ' + app.get('port'));
+});
+
+mongoose.connection.on('open', function() {
+  console.log('You are connected to mongodb');
 });
