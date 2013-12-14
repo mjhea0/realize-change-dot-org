@@ -6,6 +6,7 @@ var routes = require('./routes');
 var path = require('path');
 var request = require('request');
 var cheerio = require('cheerio');
+var mongodb = require('mongodb');
 var mongoose = require('mongoose');
 var Answers = require('./models/answers.js'); // mongo model
 
