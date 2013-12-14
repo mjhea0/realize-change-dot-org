@@ -7,7 +7,7 @@ var path = require('path');
 var request = require('request');
 var cheerio = require('cheerio');
 var mongoose = require('mongoose');
-var Answers = require('./models/answers.js');
+var Answers = require('./models/answers.js'); // mongo model
 
 // global config
 var app = express();
@@ -29,17 +29,14 @@ app.configure('production', function(){
     app.use(express.errorHandler());
 });
 
-
-
-
 // routes
 app.get('/', function(req, res){
-  Answers.find(function(error, emps){
-      console.log(emps)
-      res.render('index', {
-            title: 'Employees',
-            employees:emps
-        });
+  Answers.find(function(error, answers){
+    res.render('index', {
+      title: 'RealizeChangeDotOrg',
+      answerOne:answers[4]["answer"],
+      answerTwo:answers[3]["answer"]
+    });
   });
 });
 app.get('/ping', routes.ping);
@@ -66,9 +63,6 @@ app.get('/searching', function(req, res){
 var MONGOLAB_URI= "add_your_mongolab_uri_here"
 var mongo = process.env.MONGOLAB_URI || 'mongodb://localhost/realize-change-dot-org'
 mongoose.connect(mongo);
-
-// mongo model
-
 
 // run server
 app.listen(app.get('port'), function(){
