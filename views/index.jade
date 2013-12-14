@@ -8,10 +8,11 @@ block content
           a(href='/about') About
     .jumbotron
       h1 What are your dreams for the future?
-      p.lead Vote on your favorite answer.
-      br
-      #main-btn.animated.tada Click for an answer
-      br
+      p.lead Vote for your favorite answer.
       #main-div
-      p= answerOne
-      p= answerTwo
+        h2
+          ol
+            li= answerOne
+              | test
+            br
+            li= answerTwo

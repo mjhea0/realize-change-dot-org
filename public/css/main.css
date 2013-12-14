@@ -4,9 +4,13 @@
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
 }
 
+#main-div {
+  padding-left: 5%;
+  padding-top: 10px;
+}
 
 #main-btn {
   padding: 10px 20px 10px 20px;
