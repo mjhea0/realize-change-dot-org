@@ -35,8 +35,8 @@ app.get('/', function(req, res){
   Answers.find(function(error, answers){
     res.render('index', {
       title: 'RealizeChangeDotOrg',
-      answerOne:answers[4]["answer"],
-      answerTwo:answers[3]["answer"]
+      answerOne:answers[0]["answer"],
+      answerTwo:answers[1]["answer"]
     });
   });
 });
