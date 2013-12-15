@@ -62,9 +62,9 @@ app.post('/rating', function(req, res){
 app.get('/results', function(req, res){
   Answers.find(function(error, answers){
     res.render('results', {
-      title: 'RealizeChangeDotOrg',
-      answerOne:answers[0]["answer"],
-      answerTwo:answers[1]["answer"]
+      title: 'RealizeChangeDotOrg | Results',
+      answerOne:answers[0]["rating"],
+      answerTwo:answers[1]["rating"]
     });
   });
 });
