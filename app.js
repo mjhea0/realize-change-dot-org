@@ -40,6 +40,26 @@ app.get('/', function(req, res){
     });
   });
 });
+app.post('/rating', function(req, res){
+  addOne = req.body["addOne"]
+  addTwo = req.body["addTwo"]
+  // Answers.find(function(error, answers){
+  //   ratingOne = answers[0]["rating"] + parseInt(addOne)
+  //   ratingTwo = answers[1]["rating"] + parseInt(addTwo)
+  // });
+  if (addOne) {
+    Answers.update({answer:"I think we should do nothing."}, {$inc: {rating: +1}}, function(err, updated) {
+      if( err || !updated ) console.log("not updated");
+      else console.log("updated");
+    });
+  } else if (addTwo) {
+    Answers.update({answer:"I think we should do something."}, {$inc: {rating: +1}}, function(err, updated) {
+      if( err || !updated ) console.log("not updated");
+      else console.log("updated");
+    });
+  };
+});
+
 app.get('/ping', routes.ping);
 app.get('/about', routes.about);
 app.get('/answers', routes.answers);

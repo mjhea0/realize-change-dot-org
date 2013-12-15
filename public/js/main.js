@@ -1,8 +1,17 @@
 $(function(){
   $(".btn-one").click(function() {
-	$('#totalOne').text(parseInt($('#totalOne').text()) + 1);
+    var parameters = { addOne: 1 };
+    $.post( '/rating',parameters, function(data) {
+      $('#results').html(data);
+    });
   });
   $(".btn-two").click(function() {
-	$('#totalTwo').text(parseInt($('#totalTwo').text()) + 1);
+    var parameters = { addTwo: 1 };
+    $.post( '/rating',parameters, function(data) {
+      $('#results').html(data);
+    });
   });
 });
+
+
+
