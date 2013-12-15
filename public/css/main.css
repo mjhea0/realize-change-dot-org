@@ -1,5 +1,9 @@
-body, .jumbotron {
+body {
   background-image: url('/img/nice_snow.png'); 
+}
+
+.jumbotron {
+  background-color: transparent;
 }
 
 li {
