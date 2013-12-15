@@ -63,8 +63,10 @@ app.get('/results', function(req, res){
   Answers.find(function(error, answers){
     res.render('results', {
       title: 'RealizeChangeDotOrg | Results',
-      answerOne:answers[0]["rating"],
-      answerTwo:answers[1]["rating"]
+      answerOne:Math.round((answers[0]["rating"] / (answers[0]["rating"] + answers[1]["rating"]))*100),
+      answerTwo:Math.round((answers[1]["rating"] / (answers[0]["rating"] + answers[1]["rating"]))*100),
+      answerOneResults:answers[0]["answer"],
+      answerTwoResults:answers[1]["answer"]
     });
   });
 });
