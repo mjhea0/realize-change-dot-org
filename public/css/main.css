@@ -24,7 +24,12 @@ li {
   padding-top: 10px;
 }
 
-.row {
+.btn-row {
+  padding-top: 40px;
+}
+
+.answer-row {
+  display: none;
   padding-top: 40px;
 }
 

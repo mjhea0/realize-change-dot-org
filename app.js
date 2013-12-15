@@ -59,7 +59,15 @@ app.post('/rating', function(req, res){
     });
   };
 });
-
+app.get('/results', function(req, res){
+  Answers.find(function(error, answers){
+    res.render('results', {
+      title: 'RealizeChangeDotOrg',
+      answerOne:answers[0]["answer"],
+      answerTwo:answers[1]["answer"]
+    });
+  });
+});
 app.get('/ping', routes.ping);
 app.get('/about', routes.about);
 app.get('/answers', routes.answers);

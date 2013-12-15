@@ -11,6 +11,10 @@ $(function(){
       $('#results').html(data);
     });
   });
+  $(".btn-vote").click(function() {
+  	$(".btn-row").hide()
+  	$(".answer-row").show()
+  });
 });
 
 

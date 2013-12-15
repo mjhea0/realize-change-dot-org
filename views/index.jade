@@ -15,18 +15,13 @@ block content
             li= answerOne 
             br
             li= answerTwo
-        .row
-          button.btn.btn-primary.btn-md.btn-one(type='button') Vote One
+        .btn-row
+          button.btn.btn-primary.btn-md.btn-one.btn-vote(type='button') Vote One
           | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          button.btn.btn-success.btn-md.btn-two(type='button') Vote Two
-          div
-          | Total:
-          | &nbsp;
-          span#totalOne 0
-          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          | Total:
-          | &nbsp;
-          span#totalTwo 0
+          button.btn.btn-success.btn-md.btn-two.btn-vote(type='button') Vote Two
+        .answer-row
+          h2 Thanks for voting!
+          a(href='/results') View Results 
 
    
 
